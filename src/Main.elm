@@ -1,8 +1,24 @@
 module Main exposing (..)
 import Html exposing (..) --(h1, div, p, text)
 
-hello =  h1 [] [text "hello"]
-world =  p [] [text "world."]
 
+--view
+main : Html msg
 main =
-  div [] [ hello , world]
+  div [] [
+    p [] [(text (concat "Hello," "World!!"))]
+  ]
+
+
+
+-- model
+word : String
+word = "Hello!"
+
+concat : String -> String -> String
+concat word1 word2 = word1 ++ word2
+
+
+
+--update
+
